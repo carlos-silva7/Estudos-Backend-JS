@@ -1,0 +1,1 @@
+export const produtos =[{nome:"Rolamento",quantidade:5,estoqueMinimo: 2}]
