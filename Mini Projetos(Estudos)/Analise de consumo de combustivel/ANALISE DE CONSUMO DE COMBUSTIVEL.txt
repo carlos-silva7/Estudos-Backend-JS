@@ -1,0 +1,64 @@
+ANALISE DE CONSUMO DE COMBUSTIVEL
+
+const consumo = {
+  escavadeira: 480,
+  caminhão: 1200,
+  retroescavadeira: 350,
+  carregadeira: 900,
+  vibroCompactador: 1500,
+  trator: 280
+};
+
+const excessivo = []
+
+const alto = []
+
+const moderado = []
+
+const baixo = []
+
+
+let totalExcessivo = 0
+
+let totalAlto = 0
+
+let totalModerado = 0
+
+let totalBaixo = 0
+
+
+console.log("RELATORIO DE CONSUMO DE COMBUSTIVEL")
+console.log("------------------------------------------------------------------------------------------------")
+
+for(const chave in consumo){
+
+let classificacao = consumo[chave]
+
+	if(classificacao > 1200){
+	excessivo.push(chave);
+	totalExcessivo++ ;
+	console.log("CONSUMO EXCESSIVO")}
+else
+	if(classificacao>=800 && classificacao<=1200){
+	alto.push(chave);
+	totalAlto++ ;
+	console.log("CONSUMO ALTO")}
+else
+	if(classificacao >=400 && classificacao<800){
+	moderado.push(chave);
+	totalModerado++ ;
+	console.log("CONSUMO MODERADO")}
+else 	{baixo.push(chave);
+	totalBaixo++ ;
+	console.log("CONSUMO BAIXO")}
+
+
+}
+
+
+console.log("----------------------------------------------------------------------------------------------")
+console.log("Quantidade total de Excessivo:",totalExcessivo,"equipamentos com consumo excessivo:", excessivo)
+console.log("Quantidade total de Alto:",totalAlto,"equipamentos com consumo alto:", alto )
+console.log("Quantidade total de Moderado:",totalModerado,"equipamentos com consumo moderado:", moderado)
+console.log("Quantidade total de Baixo:",totalBaixo,"equipamentos com consumo baixo:", baixo )
+console.log("---------------------------------------------------------------------------------------------")

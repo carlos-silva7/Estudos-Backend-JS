@@ -1,0 +1,74 @@
+Mini Caixa Eletrônico
+
+Opção 1 – Ver saldo
+Opção 2 – Depositar
+Opção 3 – Sacar
+Opção 4 – Sair
+
+
+let saldo = 0
+let entrada_futura = 1.400
+
+
+while(EscolhaDeOpção!= 4){
+let EscolhaDeOpção = Number(prompt("Escolha as opções, digite o numero da opção: 1 - Ver saldo, 2 - Depositar, 3 - Sacar, 4 - sair")
+
+let menu;
+
+
+
+switch(menu){
+
+case 1: EscolhaDeOpção = "Ver saldo";{ 
+console.log(saldo);
+console.log("Proximas entradas: ",entrada_futura)};
+break;
+
+case 2: EscolhaDeOpção = "Depositar";
+
+let valor_deposito = Number(prompt("Qual valor a ser depositado"));
+
+if(valor_deposito>0 && valor_depostio!= ""){console.log("Saldo atual: ", valor_deposito + saldo)};
+
+break;
+
+case 3: EscolhaDeOpção = "Sacar";
+
+let valor_sacar = Number(prompt("Qual valor deseja sacar?"));
+if(valor_sacar>saldo && valor_sacar!=""){ console.log("Saldo Insuficiente")}
+else {console.log("Seu saldo atual é: "valor_sacar - saldo)};
+
+break;
+
+case 4: EscolhaDeOpção = "sair"
+{console.log("Muito Obrigado,volte sempre!")};
+
+break;
+
+default:
+
+console.log("Opção invalida")}};
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
+
+
+
+
+
