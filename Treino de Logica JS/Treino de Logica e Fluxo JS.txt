@@ -1,0 +1,122 @@
+const horas = {
+  escavadeira: 5120,
+  caminhão: 2980,
+  retroescavadeira: 4010,
+  carregadeira: 1500,
+  páCarregadeira: 6020
+};
+
+// ------------- categoria -------------
+
+let maquinaUrgente = []
+
+let maquinaEmbreve = []
+
+let maquinaOk = []
+
+// -------------- contador -------------
+
+let manutencaoUrgente = 0
+
+let manutencaoEmbreve = 0
+
+let manutencaoOk = 0
+
+console.log("-------- Acompanahmento de manutenção! ---------");
+
+for(const chave in horas){
+
+	let status = horas[chave]
+
+
+	if(status>5000){
+	manutencaoUrgente++ ;
+	maquinaUrgente.push(chave);
+	console.log(chave,horas[chave],"Manutenção Urgente")}
+else
+	if(status>=3000 && status<=5000){
+	manutencaoEmbreve++
+	maquinaEmbreve.push(chave);
+	console.log(chave,horas[chave],"Manutenção Em breve")}
+else
+	{manutencaoOk++ ;
+	maquinaOk.push(chave);
+	console.log(chave,horas[chave],"Manutenção OK")}
+
+}
+
+let manutencaoTotal = manutencaoUrgente+manutencaoEmbreve+manutencaoOk
+
+console.log("------------------ Maquinas por categoria de Manutenção! ------------------")
+console.log("Maquinas com Manutenção Urgente:",maquinaUrgente)
+console.log("Maquinas com Manutenção Em breve:", maquinaEmbreve)
+console.log("Maquinas com Manutenção OK:",maquinaOk)
+
+console.log("------------------ Contador de Manutenções! ------------------")
+console.log("Quantidade de Manutenção Urgente: ", manutencaoUrgente);
+console.log("Quantidade de Manutenção Em breve: ", manutencaoEmbreve);
+console.log("Quantidade de Manutenção Ok: ", manutencaoOk);
+console.log("Manutenção Total: ",manutencaoTotal)
+
+
+//------------------------ESTOQUE-------------------------------------------
+
+
+const estoque = {
+  filtro: 12,
+  rolamento: 4,
+  retentor: 7,
+  polia: 0,
+  bucha: 2,
+  mangueira: 0
+};
+
+
+let itensZerados = []
+let itensEmAtencao = []
+let itensQtdBoa = []
+let estoqueTotal = 0
+
+
+
+console.log("----------RELATORIO ESTOQUE------------")
+
+
+for(const chaves in estoque){
+
+	let valor = estoque[chaves]
+
+	if(estoque[chaves] == 0){
+	itensZerados.push(chaves);
+	
+	console.log(chaves,estoque[chaves],"Estoque zerado")}
+else
+	if(estoque[chaves] >=1 && estoque[chaves]<=5){
+	itensEmAtencao.push(chaves) ;
+	console.log(chaves,estoque[chaves],"Atenção")}
+else
+	{itensQtdBoa.push(chaves) ;
+	console.log(chaves,estoque[chaves],"Quantidade boa")}
+
+	estoqueTotal +=valor ;
+		
+}
+
+console.log("---------- Status dos itens ------------");
+console.log("Itens zerados: ",itensZerados);
+console.log("Itens em Atenção: ",itensEmAtencao);
+console.log("Itens com quantidade aceitavel: ",itensQtdBoa);
+console.log("---------- Quantidade do estoque Total------------");
+console.log("Quantidade Total: ",estoqueTotal)
+
+
+
+
+
+
+
+
+
+
+
+

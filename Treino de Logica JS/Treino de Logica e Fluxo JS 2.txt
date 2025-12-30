@@ -1,0 +1,59 @@
+const entrada_numero = prompt("digite um numero")
+const numero = Number(entrada_numero)
+
+
+if (numero %2==0){ console.log("Par")}
+
+else {console.log("impar")};
+
+
+2.
+
+
+const entrada_numero = Number(prompt("digite o numero"))
+let i = 1
+
+
+for(i=1;i<=10;i++) {
+
+console.log(entrada_numero,"x",i,"=", entrada_numero*i)};
+
+
+
+
+
+
+
+const nota1= Number(prompt("ensira a nota"))
+const nota2= Number(prompt("ensira a nota"))
+const nota3= Number(prompt("ensira a nota"))
+
+let media = 0
+
+media = (nota1 + nota2 + nota3)/3
+
+if(media>=7) {console.log("aprovado")}
+
+else if(media>=5 && media<7) {console.log("recuperação")}
+
+else if(media<5) {console.log("reprovado")};
+
+
+
+
+
+4.
+
+nome  = prompt("digite um nome")
+
+while(nome!="sair"){ console.log("Você digitou", nome)
+nome_digitado = prompt("digite um nome")}
+
+
+
+
+
+
+
+
+
